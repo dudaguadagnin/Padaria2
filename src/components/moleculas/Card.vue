@@ -15,8 +15,11 @@
             </div>
 
             <ul class="list-group list-group-flush">
-              <GrupoItens  class="list-group-item">
+              <GrupoItens  class="list-group-item" v-if="comida.quantidade != 0">
                 Disponivel {{comida.quantidade}}
+              </GrupoItens>
+              <GrupoItens  class="list-group-item sem-estoque" v-else>
+                Produto indisponivel
               </GrupoItens>
               <GrupoItens class="list-group-item preco-antigo" v-if="promocao">
                 De R$: {{ comida.precoantigo }}
@@ -43,7 +46,7 @@
               <div class="input-group-prepend">
                 <ButtonSucess
                   @click.native="comprar(comida, quantidadeCompra[id])">
-                Comprar
+                  Comprar
                 </ButtonSucess>
               </div>
             </div>
@@ -108,7 +111,6 @@ export default {
     },
     obterValor (comida, quantidadeCompra) {
       this.$store.dispatch('teste', comida)
-      // this.teste('teste', comida)
       this.$store.dispatch('ComprarQuantidade', quantidadeCompra)
     }
   },
@@ -137,5 +139,8 @@ export default {
   display: flex;
   text-decoration:none;
   text-align:center;
+}
+.sem-estoque{
+  color: red
 }
 </style>

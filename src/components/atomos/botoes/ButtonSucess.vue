@@ -2,9 +2,7 @@
   <button
     class="btn btn-outline-success "
     type="button">
-
     <slot />
-
   </button>
 </template>
 <script>

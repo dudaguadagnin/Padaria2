@@ -1,60 +1,58 @@
 <template>
 <div>
-<div class="container">
-  <form>
-    <TituloSecundario class="espacamento-superior">Adicionar Produto a Estoque</TituloSecundario>
-    <div class="form-group">
-      <EspecificacaoInput>Nome</EspecificacaoInput>
-      <InputTexto v-model="cadastroprod.nome"
-      placeholder="nome do produto"/>
-    </div>
-
-    <div class="form-group">
-      <EspecificacaoInput>Quantidade</EspecificacaoInput>
-      <InputNumeric v-model="cadastroprod.quantidade"/>
-    </div>
-
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <PrecoSifrao class="input-group-text"/>
+  <div class="container">
+    <form>
+      <TituloSecundario class="espacamento-superior">Adicionar Produto a Estoque</TituloSecundario>
+      <div class="form-group">
+        <EspecificacaoInput>Nome</EspecificacaoInput>
+        <InputTexto v-model="cadastroprod.nome"
+        placeholder="nome do produto"/>
       </div>
-      <InputTexto v-model="cadastroprod.preco"
-      placeholder="preço atual"/>
-    </div>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <PrecoSifrao class="input-group-text"/>
+
+      <div class="form-group">
+        <EspecificacaoInput>Quantidade</EspecificacaoInput>
+        <InputNumeric v-model="cadastroprod.quantidade"/>
       </div>
-      <InputTexto v-model="cadastroprod.precoantigo"
-      placeholder="preço antigo"/>
-    </div>
 
-    <div class="form-group">
-      <EspecificacaoInput>Descrição</EspecificacaoInput>
-      <CaixaTexto v-model="cadastroprod.descricao">
-      </CaixaTexto>
-    </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <PrecoSifrao class="input-group-text"/>
+        </div>
+        <InputTexto v-model="cadastroprod.preco"
+        placeholder="preço atual"/>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <PrecoSifrao class="input-group-text"/>
+        </div>
+        <InputTexto v-model="cadastroprod.precoantigo"
+        placeholder="preço antigo"/>
+      </div>
 
-    <div class="form-group">
-      <EspecificacaoInput>Link da imagem</EspecificacaoInput>
-      <InputTexto v-model="cadastroprod.imagem"
-      placeholder="https://"/>
-    </div>
+      <div class="form-group">
+        <EspecificacaoInput>Descrição</EspecificacaoInput>
+        <CaixaTexto v-model="cadastroprod.descricao">
+        </CaixaTexto>
+      </div>
 
-    <ButtonSucess class="espacamento"
-      @click.native="adicionarCardapio">
-      Adicionar a Cardapio
-    </ButtonSucess>
+      <div class="form-group">
+        <EspecificacaoInput>Link da imagem</EspecificacaoInput>
+        <InputTexto v-model="cadastroprod.imagem"
+        placeholder="https://"/>
+      </div>
 
-    <ButtonSucess class="espacamento"
-      @click.native="adicionarOferta">
-      Adicionar a Ofertas
-    </ButtonSucess>
-    <button @click="limpa">atualizar</button>
-  </form>
+      <ButtonSucess class="espacamento"
+        @click.native="adicionarCardapio">
+        Adicionar a Cardapio
+      </ButtonSucess>
 
-</div>
-
+      <ButtonSucess class="espacamento"
+        @click.native="adicionarOferta">
+        Adicionar a Ofertas
+      </ButtonSucess>
+      <button @click="limpa">atualizar</button>
+    </form>
+  </div>
 </div>
 </template>
 
