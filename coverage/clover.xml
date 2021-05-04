@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1620154117960" clover="3.2.0">
-  <project timestamp="1620154117960" name="All files">
+<coverage generated="1620159979450" clover="3.2.0">
+  <project timestamp="1620159979450" name="All files">
     <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0" elements="8" coveredelements="7" complexity="0" loc="7" ncloc="7" packages="1" files="1" classes="1">
       <file name="setup.js" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\test\unit\setup.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="4" count="14" type="stmt"/>
+        <line num="5" count="14" type="stmt"/>
+        <line num="7" count="14" type="stmt"/>
+        <line num="8" count="14" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+        <line num="19" count="14" type="stmt"/>
       </file>
     </metrics>
   </project>
