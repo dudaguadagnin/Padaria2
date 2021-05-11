@@ -3,7 +3,9 @@
     <Banner />
     <ul class="links">
       <LiEstiloPadrao class="estilo-links">
-        <AncoraLinkPadrao class="estilo-ancora" :href="'/cardapio'">Cardapio</AncoraLinkPadrao>
+        <AncoraLinkPadrao class="estilo-ancora" :href="'/cardapio'">
+          <img src="https://i.pinimg.com/originals/7b/28/90/7b28903863369080b1c424545b768314.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          Cardapio</AncoraLinkPadrao>
       </LiEstiloPadrao>
 
       <LiEstiloPadrao class="estilo-links">

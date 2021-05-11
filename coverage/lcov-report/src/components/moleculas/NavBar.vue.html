@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/moleculas/NavBar.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/moleculas</a> NavBar.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;NavbarLight&gt;
+    &lt;AncoraLinkPadrao class="navbar-brand" :href="'/'"&gt;Padaria&lt;/AncoraLinkPadrao&gt;
+    &lt;div class="collapse navbar-collapse" id="conteudoNavbarSuportado"&gt;
+      &lt;ul class="navbar-nav mr-auto"&gt;
+        &lt;LiEstiloPadrao&gt;
+          &lt;AncoraLinkPadrao :href="'/cadastro'" v-if="!usuario.logado"&gt;Cadastre-se&lt;/AncoraLinkPadrao&gt;
+        &lt;/LiEstiloPadrao&gt;
+&nbsp;
+        &lt;LiEstiloPadrao&gt;
+          &lt;AncoraLinkPadrao :href="'/login'" v-if="!usuario.logado"&gt;Login&lt;/AncoraLinkPadrao&gt;
+        &lt;/LiEstiloPadrao&gt;
+&nbsp;
+        &lt;LiEstiloPadrao&gt;
+          &lt;AncoraLinkPadrao :href="'/cardapio'"&gt;Cardapio&lt;/AncoraLinkPadrao&gt;
+        &lt;/LiEstiloPadrao&gt;
+&nbsp;
+        &lt;LiEstiloPadrao&gt;
+          &lt;AncoraLinkPadrao :href="'/cadastro-de-produtos'" v-if="usuario.logado"&gt;Cadastrar Produtos&lt;/AncoraLinkPadrao&gt;
+        &lt;/LiEstiloPadrao&gt;
+&nbsp;
+        &lt;LiEstiloPadrao class="dropdown" v-if="usuario.logado"&gt;
+          &lt;AncoraLinkPadrao class="dropdown-toggle" :href="'/'" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+          {{usuario.data.email}}
+          &lt;/AncoraLinkPadrao&gt;
+          &lt;dropdown&gt;
+            &lt;a class="dropdown-item" @click.prevent="sair"&gt;sair&lt;/a&gt;
+          &lt;/dropdown&gt;
+        &lt;/LiEstiloPadrao&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/NavbarLight&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+import { mapGetters } from 'vuex'
+import firebase from 'firebase'
+import AncoraLinkPadrao from '../atomos/links/AncoraLinkPadrao'
+import LiEstiloPadrao from '../atomos/links/LiEstiloPadrao'
+import NavbarLight from '../atomos/NavbarLight'
+import Dropdown from '../atomos/links/Dropdown'
+&nbsp;
+export default {
+  computed: {
+    ...mapGetters({
+      usuario: 'usuario'
+    })
+  },
+  methods: {
+    sair () {
+      firebase.auth().signOut().then(() =&gt; {
+        this.$router.replace('/')
+        this.$toasted.info('Você se desconectou').goAway(5000)
+      })
+    }
+  },
+  components: {
+    AncoraLinkPadrao,
+    LiEstiloPadrao,
+    NavbarLight,
+    Dropdown
+  }
+}
+&lt;/script&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri May 07 2021 13:42:20 GMT-0300 (GMT-03:00)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

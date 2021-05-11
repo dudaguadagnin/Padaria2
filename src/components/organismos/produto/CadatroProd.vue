@@ -65,6 +65,7 @@ import CaixaTexto from '../../atomos/inputs/CaixaTexto'
 import EspecificacaoInput from '../../atomos/inputs/EspecificacaoInput'
 import PrecoSifrao from '../../atomos/inputs/PrecoSifrao'
 export default {
+  name: 'CadastroProduto',
   data () {
     return {
       cadastroprod: {

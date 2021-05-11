@@ -31,6 +31,7 @@ import TituloSecundario from '../../atomos/titulos/TituloSecundario'
 import InputTexto from '../../atomos/inputs/InputTexto'
 import ButtonSucess from '../../atomos/botoes/ButtonSucess'
 export default {
+  name: 'Login',
   data () {
     return {
       usuario: {

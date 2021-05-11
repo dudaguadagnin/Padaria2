@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TituloPrincipal>Ofertas da Semana</TituloPrincipal>
+    <TituloPrincipal class="espaco">Ofertas da Semana</TituloPrincipal>
     <Card :comidas="comidas" :promocao="true"/>
   </div>
 </template>
@@ -10,6 +10,7 @@ import { getOfertas } from '../../plugins/axios'
 import Card from '../moleculas/Card'
 import TituloPrincipal from '../atomos/titulos/TituloPrincipal'
 export default {
+  name: 'Ofertas',
   data () {
     return {
       comidas: []
@@ -25,10 +26,8 @@ export default {
 }
 </script>
 <style scoped>
-.ofertas-titulo {
-  text-align: center;
-  margin-bottom: 2rem;
+.espaco{
   margin-top: 2rem;
-  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 2rem;
 }
 </style>

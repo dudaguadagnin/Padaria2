@@ -23,13 +23,14 @@ Vue.config.productionTip = false
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: 'AIzaSyAUKGgNUm0kWPcnHHTNeRGaaSKT3BsXI-U',
-  authDomain: 'projeto-vuex-364f6.firebaseapp.com',
-  databaseURL: 'https://projeto-vuex-364f6-default-rtdb.firebaseio.com',
-  projectId: 'projeto-vuex-364f6',
-  storageBucket: 'projeto-vuex-364f6.appspot.com',
-  messagingSenderId: '968865191230',
-  appId: '1:968865191230:web:0f60ac5c495862aa25886f'
+  apiKey: 'AIzaSyDgD9TkOmdpAQCm3mzQciu1-FzN-NfjdCY',
+  authDomain: 'projetovue2.firebaseapp.com',
+  databaseURL: 'https://projetovue2-default-rtdb.firebaseio.com',
+  projectId: 'projetovue2',
+  storageBucket: 'projetovue2.appspot.com',
+  messagingSenderId: '520214228955',
+  appId: '1:520214228955:web:5ef8f6bc214bfa0f8941fe',
+  measurementId: 'G-89MG3TD1VE'
 }
 
 firebase.initializeApp(firebaseConfig)

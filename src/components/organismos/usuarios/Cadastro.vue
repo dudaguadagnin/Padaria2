@@ -31,9 +31,11 @@
     name="confirmacao"
     required/>
   </div>
-    <ButtonSucess
-    @click='ConferirSenha'>cadastrar e acessar</ButtonSucess>
-    <router-link class="link" to='/login'>Ou faça login</router-link>
+  <ButtonSucess
+    @click.native="cadastrar">
+    cadastrar e acessar
+  </ButtonSucess>
+  <router-link class="link" to='/login'>Ou faça login</router-link>
 
   </div>
 </template>
@@ -45,7 +47,7 @@ import InputTexto from '../../atomos/inputs/InputTexto'
 import ButtonSucess from '../../atomos/botoes/ButtonSucess'
 import EspecificacaoInput from '../../atomos/inputs/EspecificacaoInput'
 export default {
-  name: 'cadastro',
+  name: 'CadastroUsuario',
   data () {
     return {
       usuario: {
@@ -64,6 +66,7 @@ export default {
   },
   methods: {
     cadastrar () { // criar um usuário
+      console.log('etanoiss')
       firebase.auth().createUserWithEmailAndPassword(this.usuario.email, this.usuario.senha)
         .then((user) => {
           this.$router.replace('/page-user')
@@ -77,6 +80,7 @@ export default {
       this.$http.post('users.json', this.usuario.nome, this.usuario.email)
     },
     ConferirSenha () {
+      console.log('etanoiss')
       if (this.usuario.senha !== this.usuario.confirmacao) {
         alert('As senhas tem valores diferentes!')
       } else {

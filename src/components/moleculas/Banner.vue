@@ -16,6 +16,7 @@ import TituloPrincipal from '../atomos/titulos/TituloPrincipal'
 import Subtitulo from '../atomos/titulos/Subtitulo'
 
 export default {
+  name: 'Banner',
   components: {
     TituloPrincipal,
     Subtitulo

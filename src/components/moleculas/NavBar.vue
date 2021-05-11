@@ -1,16 +1,14 @@
 <template>
   <NavbarLight>
-    <AncoraLinkPadrao class="navbar-brand" :href="'/'">Padaria</AncoraLinkPadrao>
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <AncoraLinkPadrao class="navbar-brand" :href="'/'">
+      <img src="https://image.flaticon.com/icons/png/512/1552/1552629.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Padaria
+    </AncoraLinkPadrao>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
-        <LiEstiloPadrao>
-          <AncoraLinkPadrao :href="'/cadastro'" v-if="!usuario.logado">Cadastre-se</AncoraLinkPadrao>
-        </LiEstiloPadrao>
-
-        <LiEstiloPadrao>
-          <AncoraLinkPadrao :href="'/login'" v-if="!usuario.logado">Login</AncoraLinkPadrao>
-        </LiEstiloPadrao>
-
         <LiEstiloPadrao>
           <AncoraLinkPadrao :href="'/cardapio'">Cardapio</AncoraLinkPadrao>
         </LiEstiloPadrao>
@@ -28,6 +26,13 @@
           </dropdown>
         </LiEstiloPadrao>
       </ul>
+        <LiEstiloPadrao class="navbar-nav">
+          <AncoraLinkPadrao :href="'/cadastro'" v-if="!usuario.logado">Cadastre-se</AncoraLinkPadrao>
+        </LiEstiloPadrao>
+
+        <LiEstiloPadrao class="navbar-nav">
+          <AncoraLinkPadrao :href="'/login'" v-if="!usuario.logado">Login</AncoraLinkPadrao>
+        </LiEstiloPadrao>
     </div>
   </NavbarLight>
 </template>
@@ -41,6 +46,7 @@ import NavbarLight from '../atomos/NavbarLight'
 import Dropdown from '../atomos/links/Dropdown'
 
 export default {
+  name: 'NavBar',
   computed: {
     ...mapGetters({
       usuario: 'usuario'
