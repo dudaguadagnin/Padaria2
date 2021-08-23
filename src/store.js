@@ -1,12 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getProdutos } from './plugins/axios'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  async mounted () {
-    this.comidas = await getProdutos()
-  },
   state: {
     usuario: {
       logado: false, // status no login

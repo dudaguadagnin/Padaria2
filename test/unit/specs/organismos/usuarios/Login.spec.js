@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Login from '@/components/organismos/usuarios/Login.vue'
+import Login from '@/components/organismos/usuarios/Login'
 import router from '@/router'
 import Vue from 'vue'
 Vue.use(router)

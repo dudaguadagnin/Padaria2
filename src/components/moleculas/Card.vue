@@ -1,11 +1,17 @@
 <template>
   <div class="container">
-    <div class=" row row-cols-2 row-cols-md-4 g-6" >
+    <div class="row row-cols-2 row-cols-lg-4 row-cols-md-3" >
       <div class="col" v-for="(comida, id) in comidas" :key="id">
-        <div class="card mb-3" style="height: auto">
+        <div class="card mb-6" style="height: auto">
             <ImagemCard
+              v-if="comida.imagem"
               :src="comida.imagem"
-              style="width: 100%"
+              class="card-img-top"
+              alt=""
+            />
+            <ImagemCard
+              v-else
+              src="../../assets/desenho.jpg"
               class="card-img-top"
               alt=""
             />
@@ -51,7 +57,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -101,7 +106,7 @@ export default {
         comida.quantidade = this.quantidadeEstoque
         console.log('comida.quantidade', comida.quantidade)
         this.$http
-          .put('produtos.json', this.comidas)
+          .put(`${comida.categoria}.json`, this.comidas)
           .then(resposta => {
             this.$toasted.show('Comprou').goAway(3000)
           })
@@ -130,7 +135,8 @@ export default {
   text-decoration: line-through;
 }
 .card-img-top {
-  width: 100%
+  width: 208px;
+  height: 150px;
 }
 .card{
   box-shadow: 1px 2px 10px rgb(235, 235, 235)
@@ -142,5 +148,8 @@ export default {
 }
 .sem-estoque{
   color: red
+}
+.card{
+  width: 270px;
 }
 </style>

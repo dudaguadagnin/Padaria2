@@ -13,15 +13,35 @@ Vue.use({
   }
 })
 
-export function getProdutos () {
-  return axios.get('https://projetovue2-default-rtdb.firebaseio.com/produtos.json?print=pretty')
+export function getOfertas () {
+  return axios.get('https://projetovue2-default-rtdb.firebaseio.com/ofertas.json?print=pretty')
     .then(response => {
-      console.log(response)
       return response.data
     })
 }
-export function getOfertas () {
-  return axios.get('https://projetovue2-default-rtdb.firebaseio.com/ofertas.json?print=pretty')
+export function getCategorias () {
+  return axios.get('https://projetovue2-default-rtdb.firebaseio.com/categoria.json?print=pretty')
+    .then(response => {
+      return response.data
+    })
+}
+export function getDoces () {
+  return axios
+    .get('https://projetovue2-default-rtdb.firebaseio.com/doces.json?print=pretty')
+    .then(response => {
+      return response.data
+    })
+}
+export function getSalgados () {
+  return axios
+    .get('https://projetovue2-default-rtdb.firebaseio.com/salgados.json?print=pretty')
+    .then(response => {
+      return response.data
+    })
+}
+export function getPratos () {
+  return axios
+    .get('https://projetovue2-default-rtdb.firebaseio.com/pratos.json?print=pretty')
     .then(response => {
       return response.data
     })

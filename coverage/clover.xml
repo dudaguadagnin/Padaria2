@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1620411622769" clover="3.2.0">
-  <project timestamp="1620411622769" name="All files">
-    <metrics statements="109" coveredstatements="55" conditionals="14" coveredconditionals="1" methods="31" coveredmethods="5" elements="154" coveredelements="61" complexity="0" loc="109" ncloc="109" packages="7" files="12" classes="12">
+<coverage generated="1620765069894" clover="3.2.0">
+  <project timestamp="1620765069894" name="All files">
+    <metrics statements="116" coveredstatements="63" conditionals="14" coveredconditionals="2" methods="33" coveredmethods="10" elements="163" coveredelements="75" complexity="0" loc="116" ncloc="116" packages="8" files="13" classes="13">
       <package name="src">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="router.js" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\src\router.js">
@@ -12,24 +12,24 @@
         </file>
       </package>
       <package name="src.components.moleculas">
-        <metrics statements="31" coveredstatements="14" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <metrics statements="31" coveredstatements="17" conditionals="8" coveredconditionals="1" methods="6" coveredmethods="3"/>
         <file name="Banner.vue" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\src\components\moleculas\Banner.vue">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="15" count="2" type="stmt"/>
           <line num="16" count="2" type="stmt"/>
         </file>
         <file name="Card.vue" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\src\components\moleculas\Card.vue">
-          <metrics statements="23" coveredstatements="9" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
-          <line num="61" count="2" type="stmt"/>
-          <line num="62" count="2" type="stmt"/>
-          <line num="63" count="2" type="stmt"/>
-          <line num="64" count="2" type="stmt"/>
-          <line num="65" count="2" type="stmt"/>
-          <line num="66" count="2" type="stmt"/>
-          <line num="67" count="2" type="stmt"/>
-          <line num="68" count="2" type="stmt"/>
-          <line num="69" count="2" type="stmt"/>
-          <line num="90" count="0" type="stmt"/>
+          <metrics statements="23" coveredstatements="10" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="1"/>
+          <line num="61" count="4" type="stmt"/>
+          <line num="62" count="4" type="stmt"/>
+          <line num="63" count="4" type="stmt"/>
+          <line num="64" count="4" type="stmt"/>
+          <line num="65" count="4" type="stmt"/>
+          <line num="66" count="4" type="stmt"/>
+          <line num="67" count="4" type="stmt"/>
+          <line num="68" count="4" type="stmt"/>
+          <line num="69" count="4" type="stmt"/>
+          <line num="90" count="2" type="stmt"/>
           <line num="95" count="0" type="stmt"/>
           <line num="96" count="0" type="stmt"/>
           <line num="97" count="0" type="cond" truecount="0" falsecount="4"/>
@@ -45,12 +45,12 @@
           <line num="114" count="0" type="stmt"/>
         </file>
         <file name="Ofertas.vue" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\src\components\moleculas\Ofertas.vue">
-          <metrics statements="6" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="10" count="1" type="stmt"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="15" count="0" type="stmt"/>
-          <line num="23" count="0" type="cond" truecount="0" falsecount="4"/>
+          <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="2"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="23" count="7" type="cond" truecount="1" falsecount="3"/>
           <line num="24" count="0" type="stmt"/>
         </file>
       </package>
@@ -58,10 +58,10 @@
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="Home.vue" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\src\components\organismos\Home.vue">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="19" count="1" type="stmt"/>
-          <line num="20" count="1" type="stmt"/>
           <line num="21" count="1" type="stmt"/>
           <line num="22" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.components.organismos.produto">
@@ -101,26 +101,28 @@
         </file>
       </package>
       <package name="src.components.organismos.usuarios">
-        <metrics statements="30" coveredstatements="13" conditionals="2" coveredconditionals="0" methods="9" coveredmethods="2"/>
+        <metrics statements="35" coveredstatements="16" conditionals="2" coveredconditionals="0" methods="9" coveredmethods="2"/>
         <file name="Cadastro.vue" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\src\components\organismos\usuarios\Cadastro.vue">
-          <metrics statements="17" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="1"/>
-          <line num="42" count="2" type="stmt"/>
-          <line num="43" count="2" type="stmt"/>
+          <metrics statements="19" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="1"/>
           <line num="44" count="2" type="stmt"/>
           <line num="45" count="2" type="stmt"/>
           <line num="46" count="2" type="stmt"/>
-          <line num="50" count="1" type="stmt"/>
-          <line num="66" count="0" type="stmt"/>
-          <line num="67" count="0" type="stmt"/>
+          <line num="47" count="2" type="stmt"/>
+          <line num="48" count="2" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
           <line num="69" count="0" type="stmt"/>
+          <line num="70" count="0" type="stmt"/>
           <line num="72" count="0" type="stmt"/>
-          <line num="73" count="0" type="stmt"/>
-          <line num="74" count="0" type="stmt"/>
           <line num="75" count="0" type="stmt"/>
+          <line num="76" count="0" type="stmt"/>
           <line num="77" count="0" type="stmt"/>
-          <line num="80" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="81" count="0" type="stmt"/>
+          <line num="78" count="0" type="stmt"/>
+          <line num="80" count="0" type="stmt"/>
           <line num="83" count="0" type="stmt"/>
+          <line num="84" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="85" count="0" type="stmt"/>
+          <line num="87" count="0" type="stmt"/>
         </file>
         <file name="Login.vue" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\src\components\organismos\usuarios\Login.vue">
           <metrics statements="11" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
@@ -137,21 +139,24 @@
           <line num="57" count="0" type="stmt"/>
         </file>
         <file name="PageUser.vue" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\src\components\organismos\usuarios\PageUser.vue">
-          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="12" count="1" type="stmt"/>
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.plugins">
-        <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
         <file name="axios.js" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\src\plugins\axios.js">
-          <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-          <line num="4" count="2" type="stmt"/>
-          <line num="7" count="2" type="stmt"/>
+          <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+          <line num="4" count="3" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
           <line num="17" count="1" type="stmt"/>
           <line num="19" count="0" type="stmt"/>
           <line num="20" count="0" type="stmt"/>
-          <line num="24" count="0" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
           <line num="26" count="0" type="stmt"/>
         </file>
       </package>
@@ -159,13 +164,21 @@
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="setup.js" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\test\unit\setup.js">
           <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="3" count="20" type="stmt"/>
-          <line num="4" count="20" type="stmt"/>
-          <line num="5" count="20" type="stmt"/>
-          <line num="7" count="20" type="stmt"/>
-          <line num="8" count="20" type="stmt"/>
-          <line num="10" count="20" type="stmt"/>
-          <line num="19" count="20" type="stmt"/>
+          <line num="3" count="21" type="stmt"/>
+          <line num="4" count="21" type="stmt"/>
+          <line num="5" count="21" type="stmt"/>
+          <line num="7" count="21" type="stmt"/>
+          <line num="8" count="21" type="stmt"/>
+          <line num="10" count="21" type="stmt"/>
+          <line num="19" count="21" type="stmt"/>
+        </file>
+      </package>
+      <package name="test.unit.specs.moleculas">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <file name="ofertasaxios.js" path="C:\Users\eduarda.guadagnin\Desktop\Padaria\test\unit\specs\moleculas\ofertasaxios.js">
+          <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
         </file>
       </package>
     </metrics>

@@ -1,4 +1,4 @@
-import Subtitulo from '@/components/atomos/titulos/Subtitulo'
+import Subtitulo from './src/components/atomos/titulos/Subtitulo'
 import { mount } from '@vue/test-utils'
 describe('Subtitulo', () => {
   const wrapper = mount(Subtitulo)

@@ -1,22 +1,22 @@
 <template>
-  <Card :comidas="comidas">
+  <Card :comidas="salgados">
   </Card>
 </template>
 <script>
-import { getProdutos } from '../../../plugins/axios'
+import { getSalgados } from '../../../plugins/axios'
 import Card from '../../moleculas/Card'
+
 export default {
-  name: 'produtos',
   data () {
     return {
-      comidas: []
+      salgados: []
     }
   },
   components: {
     Card
   },
   async mounted () {
-    this.comidas = await getProdutos()
+    this.salgados = await getSalgados()
   }
 }
 </script>

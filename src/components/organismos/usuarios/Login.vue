@@ -1,27 +1,30 @@
 <template>
   <div class="container">
-    <TituloSecundario class="titulo">Login</TituloSecundario>
-    <div class="form-group">
-    <InputTexto
-      type="email"
-      v-model="usuario.email"
-      placeholder="email"
-    />
+    <div class="form-signin">
+      <TituloSecundario class="titulo">Login</TituloSecundario>
+      <div class="form-group">
+        <InputTexto
+          class="tamanho"
+          type="email"
+          v-model="usuario.email"
+          placeholder="email"
+        />
+      </div>
+      <div class="form-group">
+        <InputTexto
+          class="tamanho"
+          type="password"
+          v-model="usuario.senha"
+          placeholder="senha"
+        />
+      </div>
+      <ButtonSucess
+        class="btn btn-outline-success"
+        @click.native="logar">
+        Acessar
+      </ButtonSucess>
+      <router-link class="link" to='/cadastro'>Não possui login? Cadastre-se aqui</router-link>
     </div>
-    <div class="form-group">
-    <InputTexto
-      type="password"
-      v-model="usuario.senha"
-      placeholder="senha"
-    />
-    </div>
-    <ButtonSucess
-      class="btn btn-outline-success"
-      @click.native="logar">
-      Login
-    </ButtonSucess>
-    <router-link class="link" to='/cadastro'>Não possui login? Cadastre-se aqui</router-link>
-
   </div>
 </template>
 
@@ -68,5 +71,13 @@ export default {
 .link{
   display: flex;
   margin-top: 8px;
+}
+.container{
+  text-align: center;
+  display: inline
+}
+.form-signin{
+  max-width: 330px;
+  margin: auto;
 }
 </style>

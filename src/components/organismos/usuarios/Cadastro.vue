@@ -1,41 +1,42 @@
  <template>
   <div class="container">
     <TituloSecundario class="titulo">Crie uma conta</TituloSecundario>
-  <div class="form-group">
-    <EspecificacaoInput>Nome</EspecificacaoInput>
-    <InputTexto
-    placeholder="nome"
-    v-model="usuario.nome"
-    required/>
-  </div>
-  <div class="form-group">
-    <EspecificacaoInput>Email </EspecificacaoInput>
-    <InputTexto type="email"
-    v-model="usuario.email"
-    placeholder="email"
-    required
-    />
-  </div>
-  <div class="form-group">
-    <EspecificacaoInput>Senha</EspecificacaoInput>
-    <InputTexto type="password"
-    v-model="usuario.senha"
-    placeholder="senha"
-    name="senha"
-    required/>
-  </div>
     <div class="form-group">
-    <InputTexto type="password"
-    v-model="usuario.confirmacao"
-    placeholder="confirme a senha"
-    name="confirmacao"
-    required/>
-  </div>
-  <ButtonSucess
-    @click.native="cadastrar">
-    cadastrar e acessar
-  </ButtonSucess>
-  <router-link class="link" to='/login'>Ou faça login</router-link>
+      <EspecificacaoInput>Nome</EspecificacaoInput>
+      <InputTexto
+      placeholder="nome"
+      v-model="usuario.nome"
+      required/>
+    </div>
+    <div class="form-group">
+      <EspecificacaoInput>Email </EspecificacaoInput>
+      <InputTexto type="email"
+      v-model="usuario.email"
+      placeholder="email"
+      required
+      />
+    </div>
+    <div class="form-group">
+      <EspecificacaoInput>Senha</EspecificacaoInput>
+      <InputTexto type="password"
+      v-model="usuario.senha"
+      placeholder="senha"
+      name="senha"
+      required/>
+    </div>
+      <div class="form-group">
+      <InputTexto type="password"
+      v-model="usuario.confirmacao"
+      placeholder="confirme a senha"
+      name="confirmacao"
+      required/>
+    </div>
+    <ButtonSucess
+      class="centro"
+      @click.native="cadastrar">
+      cadastrar e acessar
+    </ButtonSucess>
+    <router-link class="link" to='/login'>Ou faça login</router-link>
 
   </div>
 </template>
@@ -98,5 +99,10 @@ export default {
 .titulo{
   margin-top: 1rem;
   margin-bottom: 1rem;
+  text-align: center;
+}
+.container{
+  max-width: 330px;
+  margin: auto;
 }
 </style>

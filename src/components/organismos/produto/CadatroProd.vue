@@ -1,5 +1,4 @@
 <template>
-<div>
   <div class="container">
     <form>
       <TituloSecundario class="espacamento-superior">Adicionar Produto a Estoque</TituloSecundario>
@@ -11,7 +10,7 @@
 
       <div class="form-group">
         <EspecificacaoInput>Quantidade</EspecificacaoInput>
-        <InputNumeric v-model="cadastroprod.quantidade"/>
+        <InputNumeric v-model="cadastroprod.quantidade" placeholder="0"/>
       </div>
 
       <div class="input-group mb-3">
@@ -31,34 +30,54 @@
 
       <div class="form-group">
         <EspecificacaoInput>Descrição</EspecificacaoInput>
-        <CaixaTexto v-model="cadastroprod.descricao">
+        <CaixaTexto v-model="cadastroprod.descricao" placeholder="sabor, recheio...">
         </CaixaTexto>
       </div>
 
       <div class="form-group">
         <EspecificacaoInput>Link da imagem</EspecificacaoInput>
+        <p>Caso não tenha imagem https://www.colorironline.com/images/imgcolor/desenho-pedaco-de-bolo-para-colorir-3.jpg</p>
         <InputTexto v-model="cadastroprod.imagem"
         placeholder="https://"/>
       </div>
+      <div class="form-check">
+        <input value="ofertas" v-model="cadastroprod.categoria" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault">
+        <label class="form-check-label" for="flexRadioDefault">
+          Ofertas
+        </label>
+      </div>
+      <div class="form-check">
+        <input value="doces" v-model="cadastroprod.categoria" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+        <label class="form-check-label" for="flexRadioDefault2">
+          Doces
+        </label>
+      </div>
+      <div class="form-check">
+        <input value="salgados" v-model="cadastroprod.categoria" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+        <label class="form-check-label" for="flexRadioDefault2">
+          Salgados
+        </label>
+      </div>
+      <div class="form-check">
+        <input value="pratos" v-model="cadastroprod.categoria" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+        <label class="form-check-label" for="flexRadioDefault2">
+          Pratos
+        </label>
+      </div>
 
-      <ButtonSucess class="espacamento"
-        @click.native="adicionarCardapio">
-        Adicionar a Cardapio
+      <ButtonSucess
+        @click.native="adicionar(cadastroprod.categoria)">
+        Adicionar
       </ButtonSucess>
-
-      <ButtonSucess class="espacamento"
-        @click.native="adicionarOferta">
-        Adicionar a Ofertas
-      </ButtonSucess>
-      <button @click="limpa">atualizar</button>
     </form>
   </div>
-</div>
 </template>
 
 <script>
 import ButtonSucess from '../../atomos/botoes/ButtonSucess'
+import DropButton from '../../atomos/botoes/DropButton'
 import InputTexto from '../../atomos/inputs/InputTexto'
+import InputRadio from '../../atomos/inputs/InputRadio'
 import InputNumeric from '../../atomos/inputs/InputNumeric'
 import TituloSecundario from '../../atomos/titulos/TituloSecundario'
 import CaixaTexto from '../../atomos/inputs/CaixaTexto'
@@ -74,7 +93,8 @@ export default {
         quantidade: '',
         descricao: '',
         imagem: '',
-        precoantigo: ''
+        precoantigo: '',
+        categoria: ''
       }
     }
   },
@@ -85,22 +105,31 @@ export default {
     InputNumeric,
     CaixaTexto,
     EspecificacaoInput,
-    PrecoSifrao
+    PrecoSifrao,
+    DropButton,
+    InputRadio
   },
   methods: {
-    limpa () {
-      this.$router.replace('/cadastro-de-produtos')
+    adicionar (banco) {
+      this.$http
+        .post(`${banco}.json`, this.cadastroprod)
+        .then(resposta => {
+          this.$toasted.show('Adicionado!').goAway(3000)
+        })
+        .catch(erro => {
+          console.log(erro)
+          this.$toasted.error('Falha ao adicionar!').goAway(3000)
+        })
     },
     adicionarCardapio () {
       this.$http
         .post('produtos.json', this.cadastroprod)
         .then(resposta => {
-          this.LimparInput()
-          this.$toasted.show('Adicionado a Cardapio!').goAway(3000)
+          this.$toasted.show('Adicionado!').goAway(3000)
         })
         .catch(erro => {
           console.log(erro)
-          this.$toasted.error('Falha ao adicionar a Cardapio!').goAway(3000)
+          this.$toasted.error('Falha ao adicionar!').goAway(3000)
         })
     },
     adicionarOferta () {
@@ -108,7 +137,6 @@ export default {
         .post('ofertas.json', this.cadastroprod)
         .then(resposta => {
           this.$toasted.show('Adicionado a ofertas!').goAway(3000)
-          this.LimparInput()
         })
         .catch(erro => {
           console.log(erro)
