@@ -1,6 +1,11 @@
 # vue-app-video-vuex
 
 > A Vue.js project
+Projeto integrado a firebase
+
+Fazer login na aplicação, que permite cadastrar novos produtos
+Se não possui um usuario e senha pode ser feito cadastro na propria aplicação
+
 
 ## Build Setup
 
