@@ -1,4 +1,4 @@
-# vue-app-video-vuex
+# Padaria
 
 > A Vue.js project
 Projeto integrado a firebase
